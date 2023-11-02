@@ -7,7 +7,7 @@
 
 :root {
   /* PRIMARY COLORS */
-  --light-red-cta: hsl (356, 100%, 66%);
+  --light-red-cta: hsl(356, 100%, 66%);
   --very-light-red-cta: hsl(355, 100%, 74%);
   --very-dark-blue: hsl(208, 49%, 24%);
 
@@ -32,4 +32,191 @@ html {
 body {
   font-family: "Overpass", sans-serif;
   font-family: "Ubuntu", sans-serif;
+}
+
+#desktop-nav {
+  align-items: center;
+  padding: 13px 33px;
+}
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  list-style: none;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 12px;
+  flex-direction: row;
+  align-items: center;
+  width: 435px;
+  margin-right: 10em;
+}
+
+a {
+  color: var(--medium-gray);
+  text-decoration: none;
+  text-decoration-color: var(--almost-White);
+
+  font-family: "Epilogue", sans-serif;
+}
+
+a:hover {
+  color: var(--medium-gray);
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  text-decoration-color: var(--medium-gray);
+}
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+  margin-left: 0 auto;
+}
+
+.hamburger-icon span {
+  width: 150%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links button {
+  margin-top: 20px;
+}
+
+.menu-links a {
+  display: flex;
+  padding: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--medium-gray);
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+  align-self: start;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+
+  width: 150px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(40deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-43deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.login-register-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  margin-top: -2px;
+  gap: 1rem;
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+}
+
+.login-register-container button {
+  padding: 4px 20px;
+  border-radius: 1rem;
+}
+
+.login-btn {
+  border: none;
+}
+
+.main-header {
+  display: flex;
+}
+
+.header-content h1 {
+  text-align: center;
+}
+
+.header-content p {
+  text-align: center;
+}
+
+.start-learn-btn {
+  text-align: center;
+  display: flex;
+  gap: 1rem;
+
+  justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
 }

@@ -13,6 +13,55 @@
     />
   </head>
   <body>
+    <header>
+      <nav id="desktop-nav">
+        <img src="/images/logo.svg" alt="Snap Logo" />
+
+        <div>
+          <ul class="nav-links">
+            <li><a href="#product">Product</a></li>
+            <li><a href="#company">Company</a></li>
+            <li><a href="#Connect">Connect</a></li>
+          </ul>
+        </div>
+        <div class="login-register-container">
+          <button class="login-btn">Login</button>
+          <button class="sign-up">Sign Up</button>
+        </div>
+      </nav>
+      <nav id="hamburger-nav">
+        <img src="/images/logo.svg" alt="Snap Logo" />
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-links">
+            <ul>
+              <li><a href="#product" onclick="toggleMenu()">Product</a></li>
+              <li><a href="#company" onclick="toggleMenu()">Company</a></li>
+              <li><a href="#connect" onclick="toggleMenu()">Connect</a></li>
+            </ul>
+            <div class="menu-register">
+              <button class="login-btna" onclick="toggleMenu()">Login</button>
+              <button class="signup-btna" onclick="toggleMenu()">
+                Sign Up
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-content">
+        <h1>A modern publishing platform</h1>
+        <p>Grow your audience and build your online brand</p>
+      </div>
+      <div class="start-learn-btn">
+        <button class="start-btn">Start for free</button>
+        <button class="learn-btn">Learn More</button>
+      </div>
+    </header>
     <script src="script.js"></script>
   </body>
 </html>
