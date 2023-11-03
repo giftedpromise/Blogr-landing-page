@@ -3,26 +3,27 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 :root {
-  /* PRIMARY COLORS */
-  --light-red-cta: hsl(356, 100%, 66%);
-  --very-light-red-cta: hsl(355, 100%, 74%);
-  --very-dark-blue: hsl(208, 49%, 24%);
-
-  /* NEUTRAL COLORS */
-
-  --white: hsl(0, 0%, 100%);
-  --grayish-blue: hsl(240, 2%, 79%);
-  --very-dark-grayish-blue: hsl(207, 13%, 34%);
-  --very-dark-black-blue: hsl(240, 10%, 16%);
-
-  /* GRADIENT COLORS */
-  --very-light-red: hsl(13, 100%, 72%);
-  --light-red: hsl(353, 100%, 62%);
-  --very-dark-gray-blue: hsl(237, 17%, 21%);
-  --very-dark-desaturated-blue: hsl(237, 23%, 32%);
+  --red--light: hsl(356, 100%, 66%);
+  --red--hover: hsl(355, 100%, 74%);
+  --bkg: hsl(0, 0%, 100%);
+  --text--footer: hsl(240, 2%, 79%);
+  --text--body: hsl(207, 13%, 34%);
+  --text--headings: hsl(208, 49%, 24%);
+  --bkg--footer: hsl(240, 10%, 16%);
+  --gradient--bkg: linear-gradient(
+    180deg,
+    hsl(13, 100%, 72%) 0%,
+    hsl(356, 100%, 66%) 100%
+  );
+  --gradient--body: linear-gradient(
+    180deg,
+    hsl(237, 17%, 21%) 0%,
+    hsl(237, 23%, 32%) 100%
+  );
 }
 
 html {
@@ -99,7 +100,7 @@ a:hover {
 .hamburger-icon span {
   width: 150%;
   height: 2px;
-  background-color: black;
+  background-color: var(--bkg);
   transition: all 0.3 ease-in-out;
 }
 
@@ -107,11 +108,12 @@ a:hover {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: white;
+  color: var(--text--headings);
+  background-color: var(--bkg);
   width: fit-content;
   max-height: 0;
   overflow: hidden;
-
+  opacity: 1;
   transition: all 0.3 ease-in-out;
 }
 
@@ -122,6 +124,7 @@ a:hover {
 .menu-links a {
   display: flex;
   padding: 10px;
+
   text-align: center;
   font-size: 13px;
   color: var(--medium-gray);
@@ -184,12 +187,20 @@ a:hover {
 }
 
 .login-register-container button {
-  padding: 4px 20px;
+  padding: 8px 18px;
   border-radius: 1rem;
 }
 
 .login-btn {
   border: none;
+  background-color: transparent;
+  color: var(--bkg);
+}
+
+.sign-up-btn {
+  border: 1px solid var(--bkg);
+  background-color: var(--bkg);
+  color: var(--red--light);
 }
 
 .main-header {
@@ -198,8 +209,49 @@ a:hover {
 
 .header-content h1 {
   text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 0.5rem;
+  font-size: 3rem;
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
 }
 
+header {
+  background: var(--gradient--bkg);
+  color: var(--bkg);
+  position: relative;
+  border-bottom-left-radius: 4rem;
+}
+
+.start-btn,
+.learn-btn {
+  padding: 8px 18px;
+  border-radius: 1rem;
+  border: 1px solid var(--bkg);
+}
+
+.start-btn {
+  background-color: var(--bkg);
+  color: var(--red--light);
+}
+
+.start-btn:is(:hover, :focus) {
+  background-color: var(--red--hover);
+  color: var(--bkg);
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.learn-btn {
+  background-color: transparent;
+  color: var(--bkg);
+}
+
+.learn-btn:is(:hover, :focus) {
+  background-color: var(--bkg);
+  color: var(--red--light);
+  cursor: pointer;
+}
 .header-content p {
   text-align: center;
 }
@@ -208,7 +260,8 @@ a:hover {
   text-align: center;
   display: flex;
   gap: 1rem;
-
+  margin-top: 2rem;
+  padding-bottom: 5rem;
   justify-content: center;
 }
 
