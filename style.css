@@ -265,6 +265,46 @@ header {
   justify-content: center;
 }
 
+section {
+  padding-top: 4rem;
+  height: 96vh;
+  margin: 0 5rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.future {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.future-content-design {
+  display: flex;
+}
+
+.future-content-design .future-content {
+  width: 50%;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--text--headings);
+  font-weight: 700;
+  font-family: "Overpass", sans-serif;
+  text-align: center;
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+
+h3 {
+  color: var(--text--headings);
+  line-height: 1.2;
+}
+.future-design-image {
+  width: 50%;
+}
+
 @media screen and (max-width: 1200px) {
   #desktop-nav {
     display: none;
