@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 :root {
@@ -265,44 +266,60 @@ header {
   justify-content: center;
 }
 
-section {
-  padding-top: 4rem;
-  height: 96vh;
+#future-design {
+  min-height: 100vh;
+  position: relative;
   margin: 0 5rem;
-  box-sizing: border-box;
-  min-height: fit-content;
+  background: var(--bkg);
+  width: 100%;
+  padding: 8rem 0 3rem 8rem;
 }
 
 .future {
+  width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  position: relative;
 }
 
-.future-content-design {
-  display: flex;
-}
-
-.future-content-design .future-content {
-  width: 50%;
+.future-content {
+  flex-basis: 50%;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--text--headings);
   font-weight: 700;
   font-family: "Overpass", sans-serif;
   text-align: center;
-  margin-bottom: 0;
-  line-height: 1.2;
+  margin-bottom: 0.5rem;
 }
 
 h3 {
   color: var(--text--headings);
-  line-height: 1.2;
+  margin-bottom: 2rem;
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1.6rem;
+  padding-top: 2rem;
+}
+
+p {
+  font-size: 0.8rem;
+  margin-bottom: 3rem;
+  font-family: "Overpass", sans-serif;
+  font-weight: 300;
+  line-height: 2;
 }
 .future-design-image {
-  width: 50%;
+  position: relative;
+  flex-basis: 50%;
+}
+
+.future-design-image img {
+  width: 120%;
+  position: relative;
 }
 
 @media screen and (max-width: 1200px) {
