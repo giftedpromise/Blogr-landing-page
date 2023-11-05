@@ -327,13 +327,13 @@ p {
   display: none;
 }
 
-.content-wrapper-two {
+.infrastructure {
   background: url("./images/bg-pattern-circles.svg") no-repeat -50% 80%,
     linear-gradient(90deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
   background-position: fixed;
   display: flex;
   align-items: center;
-  color: var(--white);
+  color: var(--bkg);
   height: 400px;
   padding: 0 100px 0 120px;
   margin-top: 60px;
@@ -342,25 +342,28 @@ p {
   overflow-x: visible;
 }
 
-.image-two {
+.illustration-image {
   margin-top: 40px;
   overflow-x: visible;
 }
 
-.content-two {
-  margin: -40px 0 0 50px;
+.Infrastructure-content {
+  margin: -5px 0 0 50px;
 }
 
-.content-two h3 {
-  font-size: 38px;
+.Infrastructure-content h3 {
+  font-size: 28px;
   font-family: "Overpass", sans-serif;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  color: var(--bkg);
+  margin-left: 2rem;
 }
 
-.content-two p {
+.Infrastructure-content p {
   font-family: "Overpass", sans-serif;
-  color: var(--grayish-blue);
+  color: var(--bkg);
   line-height: 1.9;
+  margin-left: 2rem;
 }
 
 @media screen and (max-width: 1200px) {
