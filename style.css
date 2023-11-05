@@ -327,48 +327,40 @@ p {
   display: none;
 }
 
-#our-services {
-  margin-top: 10rem;
-  background-image: url(/images/bg-pattern-circles.svg), var(--gradient--body);
-  background-repeat: no-repeat;
-  background-size: 110rem, 100%;
-  background-position: left -25rem top -61rem, left;
-  min-height: 35rem;
-  height: 100%;
-  border-top-right-radius: 10rem;
-  border-bottom-left-radius: 10rem;
+.content-wrapper-two {
+  background: url("./images/bg-pattern-circles.svg") no-repeat -50% 80%,
+    linear-gradient(90deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+  background-position: fixed;
   display: flex;
   align-items: center;
-  position: relative;
+  color: var(--white);
+  height: 400px;
+  padding: 0 100px 0 120px;
+  margin-top: 60px;
+  border-radius: 0 100px 0 100px;
+
+  overflow-x: visible;
 }
 
-.infrastructure {
-  width: 90vw;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+.image-two {
+  margin-top: 40px;
+  overflow-x: visible;
 }
 
-.infrastructure-container {
-  min-height: 35rem;
-  padding: 5rem 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
-  align-items: center;
-  position: relative;
+.content-two {
+  margin: -40px 0 0 50px;
 }
 
-.infrastructure-container .services-image {
-  position: relative;
+.content-two h3 {
+  font-size: 38px;
+  font-family: "Overpass", sans-serif;
+  margin-bottom: 20px;
 }
 
-.infrastructure-container img {
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
-
-  transform: scale(1.05) translateY(10px);
-  max-width: 100%;
+.content-two p {
+  font-family: "Overpass", sans-serif;
+  color: var(--grayish-blue);
+  line-height: 1.9;
 }
 
 @media screen and (max-width: 1200px) {
