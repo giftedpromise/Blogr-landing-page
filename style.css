@@ -338,7 +338,7 @@ p {
   padding: 0 100px 0 120px;
   margin-top: 60px;
   border-radius: 0 100px 0 100px;
-
+  margin-bottom: 10rem;
   overflow-x: visible;
 }
 
@@ -364,6 +364,31 @@ p {
   color: var(--bkg);
   line-height: 1.9;
   margin-left: 2rem;
+}
+
+.illustration-container {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooling-image .mobile-illustration {
+  display: none;
+}
+
+.tooling-image .desktop-illustration {
+  width: 50%;
+}
+.tooling-image {
+  margin-left: -18rem;
+  flex-basis: 50%;
+}
+
+.powerful-content {
+  flex-basis: 50%;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 1200px) {
