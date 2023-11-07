@@ -4,7 +4,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 :root {
@@ -34,6 +33,7 @@ html {
 body {
   font-family: "Overpass", sans-serif;
   font-family: "Ubuntu", sans-serif;
+  overflow-x: hidden;
 }
 
 #desktop-nav {
@@ -178,13 +178,6 @@ a:hover {
   gap: 1rem;
   font-family: "Overpass", sans-serif;
   font-weight: 600;
-}
-
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100vw;
 }
 
 .login-register-container button {
@@ -366,29 +359,48 @@ p {
   margin-left: 2rem;
 }
 
-.illustration-container {
-  display: flex;
+.content-powerful {
+  font-family: "Overpass", sans-serif;
+  color: var(--text--headings);
+  margin-top: 120px;
+  overflow: visible;
+}
+
+.content-image {
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex-direction: row-reverse;
 }
 
-.tooling-image .mobile-illustration {
-  display: none;
+.content-heading {
+  color: var(--text--headings);
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.tooling-image .desktop-illustration {
-  width: 50%;
-}
-.tooling-image {
-  margin-left: -18rem;
-  flex-basis: 50%;
+.heading-para {
+  font-size: 16px;
+  color: var(--text--body);
+  margin-bottom: 70px;
+  line-height: 1.8;
 }
 
-.powerful-content {
-  flex-basis: 50%;
-  justify-content: center;
-  align-items: center;
+.content-three {
+  margin-top: 100px;
+  padding: 0 100px 0 80px;
+}
+
+.content-three {
+  margin-top: 160px;
+  overflow-x: visible;
+}
+
+.image-tooling img {
+  height: 700px;
+  width: 800px;
+  margin-left: -230px;
+  overflow-x: visible;
 }
 
 @media screen and (max-width: 1200px) {
