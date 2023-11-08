@@ -412,16 +412,15 @@ p {
   padding: 0 100px 0 80px;
 }
 
-.content-three {
-  margin-top: 160px;
-  overflow-x: visible;
-}
-
 .image-tooling img {
   height: 700px;
   width: 800px;
   margin-left: -230px;
   overflow-x: visible;
+}
+
+.image-tooling .mobile-illustration {
+  display: none;
 }
 
 .footer-content {
@@ -506,6 +505,10 @@ p {
 }
 
 @media screen and (max-width: 600px) {
+  header {
+    width: 100%;
+  }
+
   .future-design {
     padding: 4rem 0;
   }
@@ -520,8 +523,7 @@ p {
   }
 
   .future-design .future-content .future {
-    margin: 0 auto;
-    width: 70%;
+    width: 100%;
   }
 
   h2 {
@@ -529,6 +531,7 @@ p {
     font-weight: 700;
     margin-bottom: 2rem;
     text-align: center;
+    padding-left: 2px;
   }
 
   .future-design-image .desktop-editor {
@@ -591,13 +594,79 @@ p {
     width: 90%;
     left: -0.5rem;
     top: -13rem;
+    margin-left: 0;
   }
 
   .infrastructure .Infrastructure-content {
     margin: -13rem auto;
   }
-}
 
+  .content-image {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+
+  .image-tooling .desktop-illustration {
+    display: none;
+  }
+
+  .image-tooling .mobile-illustration {
+    display: flex;
+  }
+
+  .image-tooling img {
+    height: 100%;
+    width: 120%;
+    margin: 0 auto;
+  }
+
+  .content-image .content-three {
+    margin-top: 20px;
+    padding: 4px;
+  }
+
+  .content-heading {
+    color: var(--text--headings);
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .heading-para {
+    font-size: 14px;
+    color: var(--text--body);
+    margin-bottom: 70px;
+    line-height: 1.8;
+    text-align: center;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 30px;
+    padding-bottom: 130px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .footer-logo img {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+  }
+  .footer-description {
+    text-align: center;
+  }
+  .footer-description .bold {
+    font-size: 1rem;
+  }
+
+  .footer-description li {
+    font-size: 0.8rem;
+  }
+}
 @media screen and (max-width: 320px) {
   .infrastructure {
     background-position: fixed;
