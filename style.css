@@ -364,6 +364,7 @@ p {
   color: var(--text--headings);
   margin-top: 120px;
   overflow: visible;
+  margin-bottom: 6rem;
 }
 
 .content-image {
@@ -401,6 +402,43 @@ p {
   width: 800px;
   margin-left: -230px;
   overflow-x: visible;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: -2rem;
+  flex-direction: row;
+  padding: 70px 180px 70px 180px;
+  background-color: var(--bkg--footer);
+  font-family: "Ubuntu", sans-serif;
+  border-top-right-radius: 90px;
+  font-size: 1.1rem;
+}
+
+.footer-logo {
+  display: flex;
+}
+
+.footer-logo img {
+  float: left;
+  margin: -70px 0 80px 0;
+}
+
+.footer-description .bold {
+  font-family: "Ubuntu", sans-serif;
+  margin-bottom: 20px;
+  color: var(--bkg);
+}
+
+.footer-description li {
+  margin-bottom: 0.4rem;
+  list-style: none;
+  font-size: 1rem;
+  color: var(--text--footer);
+  font-family: "Overpass", sans-serif;
 }
 
 @media screen and (max-width: 1200px) {
