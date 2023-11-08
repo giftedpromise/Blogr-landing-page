@@ -65,18 +65,18 @@ nav {
 }
 
 a {
-  color: var(--medium-gray);
+  color: var(--bkg);
   text-decoration: none;
-  text-decoration-color: var(--almost-White);
+  text-decoration-color: var(--bkg);
 
-  font-family: "Epilogue", sans-serif;
+  font-family: "Overpass", sans-serif;
 }
 
 a:hover {
-  color: var(--medium-gray);
+  color: var(--bkg);
   text-decoration: underline;
   text-underline-offset: 0.5rem;
-  text-decoration-color: var(--medium-gray);
+  text-decoration-color: var(--bkg);
 }
 
 #hamburger-nav {
@@ -128,7 +128,7 @@ a:hover {
 
   text-align: center;
   font-size: 13px;
-  color: var(--medium-gray);
+  color: var(--bkg);
   text-decoration: none;
   transition: all 0.3 ease-in-out;
   align-self: start;
@@ -191,10 +191,24 @@ a:hover {
   color: var(--bkg);
 }
 
+.login-btn:hover {
+  color: var(--bkg);
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  text-decoration-color: var(--bkg);
+}
+
 .sign-up-btn {
   border: 1px solid var(--bkg);
   background-color: var(--bkg);
   color: var(--red--light);
+}
+
+.sign-up-btn:is(:hover, :focus) {
+  background-color: var(--red--hover);
+  color: var(--bkg);
+  border-color: transparent;
+  cursor: pointer;
 }
 
 .main-header {
@@ -208,6 +222,10 @@ a:hover {
   font-size: 3rem;
   font-family: "Overpass", sans-serif;
   font-weight: 600;
+}
+
+.header-content p {
+  color: var(--bkg);
 }
 
 header {
@@ -259,24 +277,27 @@ header {
   justify-content: center;
 }
 
-#future-design {
-  min-height: 100vh;
+.future-design {
+  padding: 9rem 0;
   position: relative;
-  margin: 0 5rem;
-  background: var(--bkg);
-  width: 100%;
-  padding: 8rem 0 3rem 8rem;
+  background-color: var(--bkg);
 }
-
-.future {
-  width: 100%;
+.future-design .future-content {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  position: relative;
+  gap: 1rem;
+  margin-top: 4rem;
 }
 
-.future-content {
-  flex-basis: 50%;
+.future-design .future-content .future {
+  width: 47%;
+  margin-left: 12rem;
+  margin-right: 2rem;
+}
+
+.future-design .future-content .future .future-content-two {
+  margin-top: 1rem;
 }
 
 h2 {
@@ -286,6 +307,7 @@ h2 {
   font-family: "Overpass", sans-serif;
   text-align: center;
   margin-bottom: 0.5rem;
+  padding-left: 5rem;
 }
 
 h3 {
@@ -294,8 +316,8 @@ h3 {
   font-family: "Overpass", sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
-  margin-bottom: 1.6rem;
-  padding-top: 2rem;
+  margin-bottom: 1.2rem;
+  padding-top: 1rem;
 }
 
 p {
@@ -304,16 +326,14 @@ p {
   font-family: "Overpass", sans-serif;
   font-weight: 300;
   line-height: 2;
-}
-.future-design-image {
-  position: relative;
-  flex-basis: 50%;
-  margin-left: 2rem;
+  color: var(--text--body);
 }
 
 .future-design-image .desktop-editor {
-  width: 120%;
-  position: relative;
+  position: absolute;
+  width: 50%;
+  right: -14%;
+  top: 20%;
 }
 
 .future-design-image .mobile-editor {
@@ -418,10 +438,6 @@ p {
   font-size: 1.1rem;
 }
 
-.footer-logo {
-  display: flex;
-}
-
 .footer-logo img {
   float: left;
   margin: -70px 0 80px 0;
@@ -441,11 +457,180 @@ p {
   font-family: "Overpass", sans-serif;
 }
 
+.features {
+  background-color: var(--White-text);
+  padding: 9rem 0;
+  position: relative;
+}
+
+.features h2 {
+  text-align: center;
+}
+
+.features .features-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.features .features-content .features-text {
+  width: 47%;
+}
+
+.features .features-content .features-text .first-text {
+  margin-bottom: 2rem;
+}
+
+.features .features-content .features-img img {
+  position: absolute;
+  width: 47%;
+  right: -15%;
+  top: 6%;
+}
+
+@media screen and (max-width: 1400px) {
+  * html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   #desktop-nav {
     display: none;
   }
   #hamburger-nav {
     display: flex;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .future-design {
+    padding: 4rem 0;
+  }
+
+  .future-design .future-content {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+
+  .future-design .future-content .future {
+    margin: 0 auto;
+    width: 70%;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .future-design-image .desktop-editor {
+    display: none;
+  }
+
+  .future-design-image .mobile-editor {
+    display: block;
+    width: 100%;
+    margin-bottom: 1.2rem;
+  }
+
+  h3 {
+    color: var(--text--headings);
+
+    font-size: 1.6rem;
+  }
+
+  .future .future-description p br {
+    display: none;
+  }
+
+  .future .future-description p {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .future .future-content-two p br {
+    display: none;
+  }
+
+  .future .future-content-two p {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .infrastructure {
+    background-position: fixed;
+    display: flex;
+    background-size: 163%, 100%;
+    background-position: 50% 350%;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 600px;
+    margin-top: 120px;
+    padding: 0;
+    border-radius: 0 80px 0 80px;
+    width: fit-content;
+  }
+
+  .infrastructure .illustration-image {
+    width: 100%;
+    position: relative;
+    height: 25rem;
+  }
+
+  .infrastructure .illustration-image img {
+    position: absolute;
+    width: 90%;
+    left: -0.5rem;
+    top: -13rem;
+  }
+
+  .infrastructure .Infrastructure-content {
+    margin: -13rem auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .infrastructure {
+    background-position: fixed;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-size: 163%, 100%;
+    background-position: 50% -260%;
+    height: 600px;
+    margin-top: 120px;
+    padding: 0;
+    border-radius: 0 80px 0 80px;
+    width: fit-content;
+
+    height: 80vh;
+  }
+
+  .infrastructure .illustration-image {
+    width: 100%;
+    position: relative;
+    height: 25rem;
+  }
+
+  .infrastructure .illustration-image img {
+    position: absolute;
+    width: 90%;
+    left: -0.5rem;
+    top: -10rem;
+  }
+
+  .infrastructure .Infrastructure-content {
+    margin-top: -18rem;
+    text-align: center;
   }
 }
