@@ -109,7 +109,7 @@ a:hover {
   position: absolute;
   top: 100%;
   right: 0;
-  color: var(--text--headings);
+  color: var(--text--footer);
   background-color: var(--bkg);
   width: fit-content;
   max-height: 0;
@@ -122,28 +122,58 @@ a:hover {
   margin-top: 20px;
 }
 
+.menu-register {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  margin-top: -2px;
+
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+}
+
+.menu-register button {
+  padding: 4px 8px;
+  border-radius: 1rem;
+}
+
+.login-btna {
+  border: none;
+  background-color: transparent;
+  color: var(--text--headings);
+}
+
+.signup-btna {
+  border: 1px solid var(--red--hover);
+  background-color: var(--red--hover);
+  color: var(--bkg);
+}
+
 .menu-links a {
   display: flex;
   padding: 10px;
-
+  font-weight: 700;
   text-align: center;
+
   font-size: 13px;
-  color: var(--bkg);
+  color: var(--text--headings);
   text-decoration: none;
   transition: all 0.3 ease-in-out;
-  align-self: start;
+  align-self: flex-start;
 }
 
 .menu-links li {
   list-style: none;
+  color: var(--bkg--footer);
 }
 
 .menu-links.open {
   max-height: 300px;
-
+  color: var(--text--footer);
   width: 150px;
-  padding-bottom: 10px;
+  padding-bottom: 10rem;
   padding-left: 5px;
+  text-align: center;
 }
 
 .hamburger-icon.open span:first-child {
@@ -505,6 +535,11 @@ p {
 }
 
 @media screen and (max-width: 600px) {
+  body,
+  html {
+    overflow-x: hidden;
+  }
+
   header {
     width: 100%;
   }
@@ -547,7 +582,11 @@ p {
   h3 {
     color: var(--text--headings);
 
-    font-size: 1.6rem;
+    font-size: 1.2rem;
+  }
+
+  .future-content .future {
+    margin-left: 2px;
   }
 
   .future .future-description p br {
@@ -556,7 +595,7 @@ p {
 
   .future .future-description p {
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .future .future-content-two p br {
@@ -565,7 +604,7 @@ p {
 
   .future .future-content-two p {
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .infrastructure {
@@ -701,5 +740,17 @@ p {
   .infrastructure .Infrastructure-content {
     margin-top: -18rem;
     text-align: center;
+  }
+
+  .h3 {
+    color: var(--text--headings);
+
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .future-content .future {
+    margin-left: -1rem;
+    width: 100%;
   }
 }
