@@ -268,18 +268,15 @@ a:hover {
 header {
   background: var(--gradient--bkg);
   color: var(--bkg);
+  background-image: url(images/bg-pattern-intro-desktop.svg),
+    linear-gradient(900deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  background-size: 200%;
+  background-position: 40% 45%;
+  background-repeat: no-repeat;
   position: relative;
   border-bottom-left-radius: 4rem;
-  z-index: 1;
-  overflow: hidden;
-}
 
-header .desktop-bg-image {
-  position: absolute;
-  z-index: -1;
-  transform: scale(4);
-  top: -4rem;
-  right: -4rem;
+  overflow: hidden;
 }
 
 .start-btn,
@@ -557,6 +554,15 @@ p {
 
   header {
     width: 100%;
+    background: url(/images/bg-pattern-intro-mobile.svg) no-repeat center 10%,
+      -webkit-gradient(linear, left top, left bottom, color-stop(20%, #ff8f70), color-stop(80%, #ff3d54));
+    background: url(/images/bg-pattern-intro-mobile.svg) no-repeat center 10%,
+      linear-gradient(to right, #ff8f70 20%, #ff3d54 50%);
+    background-position: top 45% left 35%;
+    background-size: 350%;
+
+    height: 90vh;
+    position: relative;
   }
 
   .future-design {
@@ -621,11 +627,6 @@ p {
 
   .future .future-content-two p br {
     display: none;
-  }
-
-  .future .future-content-two p {
-    text-align: center;
-    font-size: 0.8rem;
   }
 
   .header-content h1 {
@@ -756,6 +757,31 @@ p {
   }
 }
 @media screen and (max-width: 480px) {
+  .header-content h1 {
+    font-size: 2.8em;
+    font-weight: 400;
+    font-family: "Ubuntu", sans-serif;
+  }
+
+  .future .future-description p,
+  .future .future-content-two p {
+    text-align: center;
+    font-size: 0.8em;
+  }
+
+  .Infrastructure-content p {
+    font-family: "Overpass", sans-serif;
+    color: var(--bkg);
+    line-height: 1.5em;
+    text-align: center;
+    font-size: 22px;
+    margin: auto;
+    font-weight: lighter;
+  }
+
+  .Infrastructure-content h3 {
+    font-size: 2em;
+  }
 }
 
 @media screen and (max-width: 320px) {
